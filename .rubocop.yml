@@ -1,9 +1,10 @@
 AllCops:
   Exclude:
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'script/**/*'
-    - 'bin/{rails,rake,bundle}'
+    - "db/**/*"
+    - "config/**/*"
+    - "script/**/*"
+    - "bin/{rails,rake,bundle}"
+    - "vendor/**/*.rb"
 
 Style/FrozenStringLiteralComment:
   Enabled: false
