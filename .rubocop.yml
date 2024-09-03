@@ -4,7 +4,10 @@ AllCops:
     - "config/**/*"
     - "script/**/*"
     - "bin/{rails,rake,bundle}"
-    - "gemfiles/vendor/bundle/**/*"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - ".git/**/*"
 
 Style/FrozenStringLiteralComment:
   Enabled: false
