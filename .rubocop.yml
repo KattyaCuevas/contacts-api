@@ -1,13 +1,13 @@
+inherit_mode:
+  merge:
+    - Exclude
+
 AllCops:
   Exclude:
     - "db/**/*"
     - "config/**/*"
     - "script/**/*"
     - "bin/{rails,rake,bundle}"
-    - "node_modules/**/*"
-    - "tmp/**/*"
-    - "vendor/**/*"
-    - ".git/**/*"
 
 Style/FrozenStringLiteralComment:
   Enabled: false
