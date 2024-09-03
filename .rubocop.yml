@@ -4,7 +4,7 @@ AllCops:
     - "config/**/*"
     - "script/**/*"
     - "bin/{rails,rake,bundle}"
-    - "vendor/**/*.rb"
+    - "gemfiles/vendor/bundle/**/*"
 
 Style/FrozenStringLiteralComment:
   Enabled: false
