@@ -8,9 +8,26 @@ jobs:
   tests:
     name: Test
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: my_test_db
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/my_test_db
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+      - run: bin/rails db:setup
       - run: bin/rails test
