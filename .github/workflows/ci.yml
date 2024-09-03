@@ -22,7 +22,7 @@ jobs:
           --health-retries 5
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           POSTGRES_DB: my_test_db
     env:
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/my_test_db
