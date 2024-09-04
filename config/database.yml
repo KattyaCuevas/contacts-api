@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: contacts_api_production
-  username: contacts_api
+  database: contacts_db_api
+  username: contacts_db_api_user
   password: <%= ENV["CONTACTS_API_DATABASE_PASSWORD"] %>
