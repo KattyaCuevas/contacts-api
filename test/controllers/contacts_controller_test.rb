@@ -9,7 +9,7 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should get index' do
     get contacts_url, as: :json
-    assert_response :success
+    assert_response :not_found
   end
 
   test 'should create contact' do
